@@ -16,3 +16,23 @@ class LRUCache:
         
         if len(self.cache) > self.capacity:
             return self.cache.popitem(last = False)
+
+commands = ["LRUCache", "put", "get", "put", "put", "get", "get"]
+inputs =    [[2],        [1, 10], [1],   [2, 20], [3, 30], [2],   [1]]
+
+output = []
+
+lru = None
+
+for cmd, inp in zip(commands, inputs):
+    if cmd == "LRUCache":
+        lru = LRUCache(*inp)
+        output.append(None)  
+    elif cmd == "put":
+        lru.put(*inp)
+        output.append(None)  
+    elif cmd == "get":
+        res = lru.get(*inp)
+        output.append(res)   
+
+print("Output:", output)
