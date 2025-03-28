@@ -4,15 +4,15 @@ class ListNode:
         self.next = next 
         
 def mergeKlist(lists):
-    if lists or len(lists) == 0:
+    if not lists or len(lists) == 0:
         return None 
     
-    while lists[i]>1:
+    while len(lists)>1:
         temp = []
         for i in range(0, len(lists), 2):
             l1 = lists[i]
-            l2 = lists[i+1] if i+1 < len(list) else None 
-            temp = merge(l1, l2)
+            l2 = lists[i+1] if i+1 < len(lists) else None 
+            temp.append(merge(l1, l2))
         lists = temp
     return lists
 
@@ -28,9 +28,9 @@ def merge(l1, l2):
             l1 = l1.next 
         dummy = dummy.next 
     if l1:
-        l1 = l1.next 
+        dummy.next = l1 
     else:
-        l2 = l2.next 
+        dummy.next = l2
     return ans.next 
         
     
