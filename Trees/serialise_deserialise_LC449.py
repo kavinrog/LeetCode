@@ -41,4 +41,17 @@ def deserialise(data):
             q.append(node.right)
         i+=1
     return root
-        
+
+# Build a test tree manually:
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.right.left = TreeNode(4)
+root.right.right = TreeNode(5)
+
+s = serialise(root)
+print("Serialized:", s)
+
+new_root = deserialise(s)
+
+print("Serialized Again:", serialise(new_root))
