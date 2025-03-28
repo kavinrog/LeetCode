@@ -34,5 +34,29 @@ def merge(l1, l2):
     return ans.next 
         
     
-        
+def build_linked_list(arr):
+    dummy = ListNode()
+    current = dummy
+    for num in arr:
+        current.next = ListNode(num)
+        current = current.next
+    return dummy.next
+
+def linked_list_to_list(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result       
                 
+lists = [
+    build_linked_list([1, 4, 5]),
+    build_linked_list([1, 3, 4]),
+    build_linked_list([2, 6])
+]
+
+merged = mergeKlist(lists)
+
+merged_head = merged[0]
+
+print(linked_list_to_list(merged_head))
