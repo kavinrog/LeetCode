@@ -20,3 +20,6 @@ def wordladder(beginWord, endWord, wordList):
                     visited.add(nextWord)
                     q.append((nextWord, step +1))
     return 0 
+
+print(wordladder("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))
+# Output: 5 → "hit" → "hot" → "dot" → "dog" → "cog"
