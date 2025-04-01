@@ -23,3 +23,12 @@ def wordladder(beginWord, endWord, wordList):
 
 print(wordladder("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))
 # Output: 5 → "hit" → "hot" → "dot" → "dog" → "cog"
+
+
+'''✅ Time Complexity:
+	•	O(N × M × 26)
+N = number of words, M = length of each word
+
+✅ Space Complexity:
+	•	O(N) for queue and visited set'''
+
