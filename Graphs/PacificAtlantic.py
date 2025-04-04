@@ -22,7 +22,16 @@ def pacificAtlantic(heights):
     
     for r in range(ROWS):
         dfs(r, 0, pacific, heights[r][0])
-        dfs(r, COLS-1, atlantic, heights[r][COLS-1]])
+        dfs(r, COLS-1, atlantic, heights[r][COLS-1])
     return list(pacific & atlantic)
         
-        
+heights = [
+    [1, 2, 2, 3, 5],
+    [3, 2, 3, 4, 4],
+    [2, 4, 5, 3, 1],
+    [6, 7, 1, 4, 5],
+    [5, 1, 1, 2, 4]
+]
+
+result = pacificAtlantic(heights)
+print("Cells that can flow to both Pacific and Atlantic:", result)
