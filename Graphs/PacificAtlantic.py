@@ -14,7 +14,7 @@ def pacificAtlantic(heights):
             return
         visited.add((r,c))
         for dr, dc in directions:
-            dfs(r, c, visited, heights[r][c])
+            dfs(dr+r, dc+c, visited, heights[r][c])
     
     for c in range(COLS):
         dfs(0, c, pacific, heights[0][c])
