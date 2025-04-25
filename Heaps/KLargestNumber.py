@@ -17,3 +17,16 @@ def kLargestNumber(nums, k):
             heapq.heappop(minHeap)
     return minHeap[0]
     
+# Test the function
+if __name__ == "__main__":
+    nums = [3, 2, 1, 5, 6, 4]
+    k = 2
+    print(kLargestNumber(nums, k))  # Output: [5, 6]
+    
+    nums = [3, 2, 3]
+    k = 2
+    print(kLargestNumber(nums, k))  # Output: [3, 3]
+    
+    nums = [1]
+    k = 1
+    print(kLargestNumber(nums, k))  # Output: [1]
