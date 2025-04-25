@@ -1,5 +1,5 @@
 import heapq
-def findkSmallestNumbers(nums, k):
+def findkSmallestNumbers(nums, k, return_k_smallest_list=1):
     """
     Find the k smallest numbers in an array.
     :param nums: List[int] - The input array
@@ -15,7 +15,10 @@ def findkSmallestNumbers(nums, k):
         heapq.heappush(maxHeap, -num)
         if(len(maxHeap)>k):
             heapq.heappop(maxHeap)
-    return -maxHeap[0]
+    if(return_k_smallest_list == 1):
+        return sorted([-x for x in maxHeap])
+    else:   
+        return -maxHeap[0]
 
 # Test the function
 if __name__ == "__main__":
