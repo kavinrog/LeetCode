@@ -1,4 +1,7 @@
 import heapq
+
+RETURN_K_LARGEST_LIST = 1
+
 def kLargestNumber(nums, k):
     """
     This function returns the k largest numbers from the given list of numbers.
@@ -15,7 +18,11 @@ def kLargestNumber(nums, k):
         heapq.heappush(minHeap, num)
         if(len(minHeap)>k):
             heapq.heappop(minHeap)
-    return minHeap[0]
+    if(RETURN_K_LARGEST_LIST == 1):
+        return sorted(minHeap, reverse=True)
+    else:
+        return minHeap[0]
+
     
 # Test the function
 if __name__ == "__main__":
