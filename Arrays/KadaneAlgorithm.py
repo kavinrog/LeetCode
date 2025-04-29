@@ -7,3 +7,11 @@ def maxSumSubArray(arr):
         global_sum = max(global_sum ,curr_sum)
     return global_sum
 
+# Test the function
+if __name__ == "__main__":
+    arr = [-2,1,-3,4,-1,2,1,-5,4]
+    print(maxSumSubArray(arr))  # Output: 6
+    arr = [1]
+    print(maxSumSubArray(arr))  # Output: 1
+    arr = [5,4,-1,7,8]
+    print(maxSumSubArray(arr))  # Output: 23
