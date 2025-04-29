@@ -18,3 +18,15 @@ def maxSumSubarrayPrint(arr, n):
     print("Maximum sum subarray is:", arr[start:end+1])
     print("Maximum sum is:", global_sum)
     return global_sum
+
+# Test the function
+if __name__ == "__main__":
+    arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+    n = len(arr)
+    print(maxSumSubarrayPrint(arr, n))  # Output: 6
+    arr = [1]
+    n = len(arr)
+    print(maxSumSubarrayPrint(arr, n))  # Output: 1
+    arr = [5, 4, -1, 7, 8]
+    n = len(arr)
+    print(maxSumSubarrayPrint(arr, n))  # Output: 23
