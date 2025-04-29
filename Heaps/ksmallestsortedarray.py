@@ -28,3 +28,16 @@ if __name__ == "__main__":
     arrays = [[1], [2], [3]]
     k = 2
     print(ksmallestsortedarray(arrays, k))  # Output: 2
+    
+    
+import torch 
+
+model.train()
+output = model(X_train)
+
+loss = criterion(output, y_train)
+
+
+optimiser.zero_grad()
+loss.backward()
+optimiser,step()
