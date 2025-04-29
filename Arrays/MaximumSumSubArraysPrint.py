@@ -16,7 +16,6 @@ def maxSumSubarrayPrint(arr, n):
             start = temp_start
             end = i 
     print("Maximum sum subarray is:", arr[start:end+1])
-    print("Maximum sum is:", global_sum)
     return global_sum
 
 # Test the function
