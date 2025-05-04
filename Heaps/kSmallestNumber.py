@@ -15,6 +15,7 @@ def findkSmallestNumbers(nums, k, return_k_smallest_list=1):
         heapq.heappush(maxHeap, -num)
         if(len(maxHeap)>k):
             heapq.heappop(maxHeap)
+    print(maxHeap)
     if(return_k_smallest_list == 1):
         return sorted([-x for x in maxHeap])
     else:   
